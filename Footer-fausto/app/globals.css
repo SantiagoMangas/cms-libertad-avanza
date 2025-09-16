@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+/* El resto de tu código CSS va aquí */
+/* Por ejemplo, tus fuentes personalizadas y variables */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+:root {
+  --gold: #FFD700;
+  --footer-bg: #181818;
+  --footer-text: #fff;
+  --footer-link-hover: #a78bfa;
+  --font-main: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  font-family: var(--font-main);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Clases personalizadas para el efecto de subrayado en los enlaces */
+.footer-link-hover-underline:hover {
+  text-decoration: underline;
+  text-decoration-color: #e91e63;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
