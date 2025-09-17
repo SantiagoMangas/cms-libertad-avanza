@@ -71,10 +71,16 @@ const Home = () => {
             </div>
             
             <div className="hidden md:flex space-x-8">
-              {['Inicio', 'Propuestas', 'Quién Soy', 'Noticias', 'Galería', 'Contacto'].map((item) => (
+              {['Inicio', 'Propuestas', 'Quién Soy', 'Noticias', 'Galería', 'Contacto','Blog'].map((item) => (
                 <button
                   key={item}
-                  onClick={() => scrollToSection(item.toLowerCase().replace(' ', '-'))}
+                  onClick={() => {
+                    if (item === 'Blog') {
+                      window.location.href = '/posts'; // navega al blog
+                    } else {
+                      scrollToSection(item.toLowerCase().replace(' ', '-'));
+                    }
+                  }}
                   className="text-gray-700 hover:text-purple-600 transition-colors font-medium"
                 >
                   {item}
